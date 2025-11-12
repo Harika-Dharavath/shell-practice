@@ -11,7 +11,7 @@ SCRIPT_NAME=$( echo $0 | cut -d "." -f1)
 LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log"
 
 mkdir -p $LOGS_FOLDER
-echo -e "$G script started executed at : $(date) $N"
+echo -e "$G script started executed at : $(date) $N" | tee -a $LOG_FILE #tee lets you see the output on the screen while also saving it to a file.
 
 USERID=$(id -u) # prints the user id of current user
 if [ $USERID -ne 0 ]; then
