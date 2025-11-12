@@ -27,7 +27,7 @@ VALIDATECOMMAND $? "Mysql"
 #ealier i gave mysql at last as mangobd couldnt install it have stopped there only mysql is also not installed so now i changed mysql in middle it have executed
 
 dnf insatll python3 -y
-VALIDATECOMMAND $? "Python3"
+VALIDATECOMMAND $? "python3"
 
 dnf install mongodb-mongosh -y
 VALIDATECOMMAND $? "Mongodb" #without calling it will not execute
