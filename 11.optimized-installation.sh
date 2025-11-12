@@ -21,9 +21,12 @@ VALIDATECOMMAND(){ #no space should be between validate command and ()
 dnf install nginx -y
 VALIDATECOMMAND $? "Nginx" #without calling it will not execute here we called the validate function
 
-dnf install mongodb-mongosh -y
-VALIDATECOMMAND $? "Mongodb" #without calling it will not execute
 
 dnf install mysql -y
 VALIDATECOMMAND $? "Mysql"
+
+dnf install mongodb-mongosh -y
+VALIDATECOMMAND $? "Mongodb" #without calling it will not execute
+
+
  
