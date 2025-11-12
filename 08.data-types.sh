@@ -17,4 +17,7 @@ echo "Number of characters in LEADERS string is: ${#LEADERS}"
 PEOPLE=("gandhi" "mandela" "martin luther king jr" "jawaharlal nehru")
 #to get number of elements in an array
 echo "Number of elements in PEOPLE array is: ${PEOPLE[@]}"
+#if u add  "#" before PEOPLE it will give number of characters in first element of array
 
+echo "frist element of PEOPLE array is: ${PEOPLE[0]}"
+#indexing starts from 0
