@@ -14,10 +14,11 @@ do
   PARTITION=$(echo $line | awk '{print $7}')  
 
    if [ $USAGE -ge $DISK_THRESHOLD ]; then
-      MESSAGE+="Alert: High Disk Usage on $PARTITION: $USAGE% \n"
+      MESSAGE+="Alert: High Disk Usage on $PARTITION: $USAGE% \n" #\n new line la kakunda normal text laaga treat chesthundi so -e is added near message
    fi
       
 done <<< "$DISK_USAGE" # "<<<" string	Read input from a string
                            #👉 Take the content stored in $DISK_USAGE
 
-echo "message Body: $MESSAGE"                     
+echo -e "message Body: $MESSAGE" # -e to get /n as next line 
+                    
