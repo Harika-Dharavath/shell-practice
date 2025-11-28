@@ -12,7 +12,6 @@ do
 
    if [ "$USAGE" -ge "$DISK_THRESHOLD" ]; then
      echo "Alert: High Usage on $PARTITON: $USAGE"
-     echo "$line"
    fi
       
 done <<< "$DISK_USAGE" # "<<<" string	Read input from a string
