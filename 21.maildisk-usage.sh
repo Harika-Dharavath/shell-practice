@@ -4,7 +4,7 @@
 
 DISK_USAGE=$(df -hT | grep -v Filesystem)
 DISK_THRESHOLD=2 #normally in projects we use 75
-IP_ADDRESS=$(curl http://169.254.169.254/latest/meta-data/public-ipv4)
+IP_ADDRESS=$(curl -s http://169.254.169.254/latest/meta-data/public-ipv4) #-s to silent and not ot print on terminal for clean look
 MESSAGE=""
 while IFS= read -r line  #IFS internal field seperator
                          #IFS= ',' read name age <<< harika,27  then output lo coma deggara slipt aitadi #its separated by ,”.  
@@ -21,4 +21,3 @@ done <<< "$DISK_USAGE" # "<<<" string	Read input from a string
                            #👉 Take the content stored in $DISK_USAGE
 
 echo -e "message Body: $MESSAGE" # -e to get /n as next line 
-                    
