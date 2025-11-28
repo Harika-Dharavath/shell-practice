@@ -21,3 +21,5 @@ done <<< "$DISK_USAGE" # "<<<" string	Read input from a string
                            #👉 Take the content stored in $DISK_USAGE
 
 echo -e "message Body: $MESSAGE" # -e to get /n as next line 
+
+sh mail.sh "harikadharavath987@gmail.com" "High Disk Usage alert" "High Disk Usage" "$MESSAGE" "$IP_ADDRESS" "DevOps Team"
